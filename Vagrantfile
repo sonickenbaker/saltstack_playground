@@ -2,7 +2,7 @@ require 'fileutils'
 require 'yaml'
 configuration = YAML.load_file('configuration.yml')
 
-NODE_COUNT = 2
+NODE_COUNT = configuration['parameters']['node-count']
 BOX_IMAGE = "ubuntu/bionic64"
 
 Vagrant.configure("2") do |config|
