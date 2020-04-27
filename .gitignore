@@ -1,0 +1,12 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+#IntelliJIDEA
+.idea
+*.iml
+# MacOXS Finder
+.DS_Store
+# Python compiled files
+*.pyc
+#
+*.log
+configuration.yml
+.vagrant
