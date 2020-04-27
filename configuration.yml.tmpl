@@ -4,4 +4,12 @@ shared-folders:
 forwarded-ports: {}
 parameters:
     salt-version: 2019.2.2
-    node-count: 2
+    #minions-only: True
+    #master-addr: 10.0.2.15
+    node-count: 1
+    master:
+        cpus: 2
+        memory: 2048
+    minion:
+        cpus: 1
+        memory: 1024
