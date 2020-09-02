@@ -1,7 +1,12 @@
 require 'fileutils'
 require 'yaml'
-configuration = YAML.load_file('configuration.yml')
-parameters = configuration.fetch('parameters', {})
+begin
+  configuration = YAML.load_file('configuration.yml')
+rescue
+  puts("No configuration file specified")
+  exit(0)
+end
+  parameters = configuration.fetch('parameters', {})
 
 NODE_COUNT = parameters['node-count']
 BOX_IMAGE = "ubuntu/bionic64"
